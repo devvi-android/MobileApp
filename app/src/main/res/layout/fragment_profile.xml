@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.Profile.ProfileFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profileCard"
+                    android:layout_width="320dp"
+                    android:layout_height="320dp"
+                    android:layout_margin="60dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="6dp"
+                    app:layout_constraintBottom_toTopOf="@id/inviteFriends"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/personImageContent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="60dp"
+                            android:src="@drawable/bg"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/personNameContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/person_name"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/personEmailContent"
+                            app:layout_constraintTop_toBottomOf="@id/personImageContent" />
+
+                        <TextView
+                            android:id="@+id/personEmailContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/person_name"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/personNameContent" />
+
+                        <TextView
+                            android:id="@+id/personDescContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            android:text="@string/profile_desc"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/personEmailContent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/inviteFriends"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="44dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/invite_friends"
+                    android:textColor="@color/green_color"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_baseline_share_24"
+                    app:iconGravity="start"
+                    app:iconPadding="4dp"
+                    app:iconSize="24dp"
+                    app:iconTint="@color/green_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profileCard" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/aboutApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginEnd="44dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/about_app"
+                    android:textColor="@color/green_color"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_baseline_report_gmailerrorred_24"
+                    app:iconGravity="start"
+                    app:iconPadding="4dp"
+                    app:iconSize="24dp"
+                    app:iconTint="@color/green_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/inviteFriends" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginEnd="44dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/faq"
+                    android:textColor="@color/green_color"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_baseline_question_mark_24"
+                    app:iconGravity="start"
+                    app:iconPadding="4dp"
+                    app:iconSize="24dp"
+                    app:iconTint="@color/green_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/aboutApp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/logOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginEnd="44dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/logout"
+                    android:textColor="@color/green_color"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_baseline_logout_24"
+                    app:iconGravity="start"
+                    app:iconPadding="4dp"
+                    app:iconSize="24dp"
+                    app:iconTint="@color/green_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/faq" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+</layout>

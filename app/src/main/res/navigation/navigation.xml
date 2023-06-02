@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/events">
+    <fragment
+        android:id="@+id/events"
+        android:name="com.app.citycare.ui.Event.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event">
+        <action
+            android:id="@+id/action_events_to_addBlogFragment"
+            app:destination="@id/addBlogFragment" />
+        <action
+            android:id="@+id/action_events_to_blogDetailFragment"
+            app:destination="@id/blogDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/map"
+        android:name="com.app.citycare.ui.Map.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/news"
+        android:name="com.app.citycare.ui.News.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_news_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+        <action
+            android:id="@+id/action_news_to_newsBookmarksFragment"
+            app:destination="@id/newsBookmarksFragment" />
+        <action
+            android:id="@+id/action_news_to_newsSearchFragment"
+            app:destination="@id/newsSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.app.citycare.ui.Profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_faqFragment"
+            app:destination="@id/faqFragment" />
+        <action
+            android:id="@+id/action_profile_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.app.citycare.ui.News.NewsDetailFragment"
+        android:label="fragment_news_details"
+        tools:layout="@layout/fragment_news_details">
+        <argument
+            android:name="article"
+            app:argType="com.app.citycare.models.news.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.app.citycare.ui.Profile.FAQ.FaqFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" />
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.app.citycare.ui.Profile.AboutApp.AboutAppFragment"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_about_app" />
+    <fragment
+        android:id="@+id/newsBookmarksFragment"
+        android:name="com.app.citycare.ui.News.NewsBookmarksFragment"
+        android:label="fragment_bookmarks"
+        tools:layout="@layout/fragment_bookmarks">
+        <action
+            android:id="@+id/action_newsBookmarksFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsSearchFragment"
+        android:name="com.app.citycare.ui.News.NewsSearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_newsSearchFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blogDetailFragment"
+        android:name="com.app.citycare.ui.Event.BlogDetailFragment"
+        android:label="activity_blog_detail"
+        tools:layout="@layout/activity_blog_detail">
+        <argument
+            android:name="model"
+            app:argType="com.app.citycare.models.events.Model"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addBlogFragment"
+        android:name="com.app.citycare.ui.Event.AddBlogFragment"
+        android:label="fragment_publish"
+        tools:layout="@layout/fragment_publish" />
+</navigation>
